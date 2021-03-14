@@ -21,3 +21,7 @@ gulp.task('css', function(){
     .pipe(uncss({html:['Views/**/*.cshtml']}))
     .pipe(gulp.dest('wwwroot/css'));
 });
+
+gulp.task('watch-css', function(){
+    gulp.watch('./styles/**/*.css', ['css']);
+});
